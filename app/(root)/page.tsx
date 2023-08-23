@@ -7,6 +7,9 @@ export default function Home() {
       <Button size="lg" variant="outline">
         Test
       </Button>
+      <Button size="icon" variant="destructive">
+        Test
+      </Button>
     </>
   );
 }
