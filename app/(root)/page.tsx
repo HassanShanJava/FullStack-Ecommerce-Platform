@@ -1,14 +1,23 @@
-import { Button } from "@/components/ui/button";
+"use client";
+
 import { UserButton } from "@clerk/nextjs";
 
-const SetupPage = () => {
-  return (
-    <div className='p-4'>
-      This is a protected route
-      <UserButton afterSignOutUrl="/"/>
+import { Modal } from "@/components/ui/modal";
+import { useStoreModal } from "@/hooks/use-store-modal";
+import { useEffect } from "react";
 
-    </div>
-  );
+const SetupPage = () => {
+  // const storeModal=useStoreModal()
+  const onOpen = useStoreModal((state) => state.onOpen);
+  const isOpen = useStoreModal((state) => state.isOpen);
+
+  useEffect(()=>{
+    if(!isOpen){
+      onOpen()
+    }
+  },[isOpen,onOpen])   //special case where we need the modal to be open no mmater what, user should not cloase until filled
+
+  return <div className="p-4">Root Page</div>;
 };
 
 export default SetupPage; //layout and pages need to hv export default
