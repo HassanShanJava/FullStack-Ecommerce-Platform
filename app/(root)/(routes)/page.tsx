@@ -17,7 +17,7 @@ const SetupPage = () => {
     }
   },[isOpen,onOpen])   //special case where we need the modal to be open no mmater what, user should not cloase until filled
 
-  return <div className="p-4">Root Page</div>;
+  return null; //only need it for modal setup
 };
 
 export default SetupPage; //layout and pages need to hv export default
