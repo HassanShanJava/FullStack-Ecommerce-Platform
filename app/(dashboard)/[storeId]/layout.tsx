@@ -29,7 +29,7 @@ const DashboardLayout = async({
 
   return (
     <>
-    <div>This is gona be a Navebar</div>
+    <div>This is gona be a Navbar</div>
     {children}
     </>
   )

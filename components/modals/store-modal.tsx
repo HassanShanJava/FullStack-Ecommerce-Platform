@@ -45,7 +45,9 @@ export const StoreModal = () => {
       // throw new Error("x")
       const response = await axios.post('/api/stores', values)
       console.log(response.data, "data response store")
-      toast.success("Store Created Successfully")
+      // toast.success("Store Created Successfully") //no need just redirect
+      window.location.assign(`/${response.data.id}`) // -> this will doo a complete refresh, so route cn be loaded in db
+
     } catch (error) {
 
       toast.error("Something Went Wrong")
