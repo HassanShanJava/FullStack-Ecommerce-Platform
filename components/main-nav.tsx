@@ -7,11 +7,12 @@ import React from 'react'
 const MainNav = ({className, ...props}:React.HTMLAttributes<HTMLElement>) => {
     const pathName=usePathname()
     const params=usePathname()
+    // params contain storeId
     const routes=[
         {
-           href:`/${params.storeId}/settings`,
+           href:`${params}/settings`,
            label:"Settings",
-           active: pathName=== `/${params.storeId}/settings`
+           active: pathName=== `${params}/settings`
         }
     ]
   return (
