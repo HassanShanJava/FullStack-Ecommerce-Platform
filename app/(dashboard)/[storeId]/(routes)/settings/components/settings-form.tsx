@@ -7,7 +7,12 @@ interface SettingsFormProps{
 
 const SettingsForm:React.FC<SettingsFormProps> = ({params}) => {
   return (
-    <div>SettingsForm</div>
+    <div>
+      <div>
+        guh jh
+      </div>
+      <p></p>
+    </div>
   )
 }
 
